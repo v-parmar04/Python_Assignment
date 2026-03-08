@@ -16,9 +16,8 @@ def tax_decorator(func):
         price = func(base_price)
         print("This is tax decorator")       
         discount_amount = price * 18 / 100
-        final_price = price - discount_amount
-        print(final_price)
-        return final_price
+        final_price_after_tax = price - discount_amount
+        return final_price_after_tax
     
     return wrapper
 
